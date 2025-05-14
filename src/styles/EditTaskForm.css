@@ -1,0 +1,64 @@
+/* Edit Task Form Container */
+.edit-task-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.edit-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00682C;
+}
+
+/* Input Fields */
+.task-input, .date-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.task-input:focus, .date-input:focus {
+    border-color: #008C3D;
+    outline: none;
+}
+
+/* Button Container */
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Save Button */
+.save-task-btn {
+    background: #008C3D;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.save-task-btn:hover {
+    background: #00682C;
+}
+
+/* Cancel Button */
+.cancel-task-btn {
+    background: #d1d5db;
+    color: black;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.cancel-task-btn:hover {
+    background: #b0b3b8;
+}

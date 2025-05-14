@@ -1,0 +1,60 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay to dim background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures it appears above all other content */
+}
+
+/* Modal Container */
+.modal-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+}
+
+/* Modal Title */
+.modal-title {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Task Info Styling */
+.task-name, .task-description, .due-date {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Close Button */
+.close-btn {
+    background: #008C3D;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.close-btn:hover {
+    background: #00682C; /* Darker green */
+}

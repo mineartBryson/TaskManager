@@ -1,0 +1,262 @@
+/* TaskList.css */
+
+.react-calendar {
+    width: 100%;
+    max-width: 800px; /* Keeps the calendar contained */
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+.react-calendar__navigation {
+    background: #008C3D;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Days of the week */
+.react-calendar__month-view__weekdays {
+    font-weight: bold;
+    color: #00682C;
+    text-transform: uppercase;
+}
+
+/* Individual day styling */
+.react-calendar__tile {
+    background: rgb(184, 219, 244);
+    border-radius: 6px;
+    padding: 8px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.react-calendar__tile:hover {
+    background: #DFF5E4; /* Soft green hover effect */
+    transform: scale(1.05);
+}
+
+/* Highlight tasks on calendar */
+.calendar_task {
+    font-size: 12px;
+    font-weight: bold;
+    color: #008C3D;
+    text-align: center;
+    padding: 3px;
+    border-radius: 4px;
+    background: #DFF5E4; /* Green highlight for tasks */
+}
+
+
+.task_list_controls {
+    display: flex;
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center;
+    gap: 12px; /* Adds spacing */
+    width: 100%;
+    margin-bottom: 15px; /* Adds spacing before list */
+}
+
+.toggle_button {
+    display: flex;
+    align-items: center; /* Centers icon & text vertically */
+    justify-content: center; /* Keeps spacing even */
+    gap: 5px;
+    background-color: #00AE4D; /* Bright green (NerdWallet theme) */
+    color: white; /* White text for contrast */
+    border: none;
+    border-radius: 5px; /* Slight rounding for a modern look */
+    padding: 5px 8px; /* Comfortable spacing */
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer; /* Shows clickable action */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    min-width: 100px;
+    white-space: nowrap;
+}
+
+/* List container for tasks */
+.task_list {
+    display: flex;
+    flex-direction: column; /* Ensures tasks stack vertically */
+    list-style: none;
+    background: #f4f8f9; /* Light, clean background */
+    padding: 15px;
+    border-radius: 8px; /* Slightly rounded edges */
+}
+
+/* Individual task item */
+.task_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px;
+    background: #ffffff; /* White background for each task */
+    border: 1px solid #d1d5db; /* Light border for separation */
+    border-radius: 6px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect to add subtle elevation */
+.task_item:hover {
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Task content wrapper */
+.task_content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+/* Task title */
+.task_title {
+    flex: 1; /* Allows title to take available space */
+    min-width: 200px;
+    max-width: 275px; /* Prevents titles from becoming excessively wide */
+    font-weight: bold;
+    font-size: 18px;
+    color: #00682C; /* Dark green */
+    text-align: left;
+    white-space: normal; /* Allows natural text wrapping */
+    word-wrap: break-word; /* Ensures long words wrap properly */
+}
+
+/* Due date container */
+.task_due_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Ensures consistent alignment */
+    gap: 5px; /* Space between label & date */
+    min-width: 170px; /* Gives enough room for alignment */
+}
+
+/* Task due date label */
+.task_due_label {
+    width: 50px; /* Ensures uniform alignment */
+    text-align: right;
+    font-weight: bold;
+    color: #00682C;
+}
+
+/* Task due date */
+.task_due {
+    flex: 1; /* Allows flexibility in alignment */
+    text-align: left; /* Aligns date consistently under "Due:" */
+    font-size: 16px;
+    color: #00682C;/* Bright green for due date */
+    font-weight: 500;
+}
+
+@media screen and (max-width: 900px) {
+    .task_item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Ensures everything is centered */
+        text-align: center; /* Helps with text alignment */
+        gap: 15px; /* Adds balanced spacing */
+        width: 100%; /* Prevents items from shrinking too much */
+    }
+
+    .task_actions {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Centers them */
+        gap: 10px;
+        width: 100%; /* Prevents buttons from squeezing */
+    }
+
+    .task_content {
+        display: flex;
+        flex-direction: column; /* Ensures title & due date stack */
+        align-items: center; /* Keeps content aligned properly */
+        width: 100%; /* Prevents shrinking */
+    }
+
+    .task_title {
+        text-align: center; /* Ensures task title is centered */
+        max-width: 300px; /* Prevents extra-wide titles from breaking layout */
+        word-wrap: break-word; /* Allows wrapping for long titles */
+    }
+
+    .task_due_container {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Ensures perfect horizontal centering */
+        gap: 5px; /* Balances spacing */
+        width: 100%; /* Expands to full available space */
+        max-width: 160px; /* Prevents excessive stretching */
+        margin: 0 auto; /* Centers it within its parent */
+    }
+
+    .task_due {
+        white-space: nowrap; /* Prevents date from wrapping */
+        overflow: visible; /* Ensures it remains visible */
+        text-align: left; /* Maintains alignment */
+        flex-grow: 1; /* Allows it to expand if needed */
+        min-width: 100px; /* Prevents shrinking to zero */
+    }
+
+    .task_due_label {
+        text-align: right; /* Keeps "Due:" from shifting weirdly */
+        font-weight: bold;
+    }
+}
+
+.task_list_options {
+    display: flex;
+    justify-content: space-between; /* Pushes items apart */
+    align-items: center; /* Keeps them aligned */
+    width: 100%; /* Ensures full width */
+    margin-bottom: 10px; /* Adds space below */
+    color: #00682C;
+}
+
+.task_selector {
+    min-width: 150px;
+}
+
+
+/* Wrapper for task action buttons */
+.task_actions {
+    display: flex;
+    gap: 10px; /* Spaces out buttons */
+    justify-content: flex-end;
+    margin: 4px 1px;
+}
+
+/* Button for editing a task */
+.task_button {
+    display: flex;
+    align-items: center; /* Centers icon & text vertically */
+    justify-content: center; /* Keeps spacing even */
+    gap: 5px;
+    background-color: #00AE4D; /* Bright green (NerdWallet theme) */
+    color: white; /* White text for contrast */
+    border: none;
+    border-radius: 5px; /* Slight rounding for a modern look */
+    padding: 5px 8px; /* Comfortable spacing */
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer; /* Shows clickable action */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    min-width: 100px;
+    white-space: nowrap;
+}
+
+.task_button i {
+    font-size: 18px; /* Ensures the icon is visible */
+}
+
+.task_button:hover {
+    background-color: #008C3D; /* Slightly darker green on hover */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); /* Deepens the shadow */
+    transform: scale(1.05); /* Slightly enlarges for emphasis */
+}
