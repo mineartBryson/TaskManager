@@ -1,9 +1,5 @@
-/* BEM Stlying - Ideal / Best Practice */
-
-
-
-/* Overall form container */
-.add-task-form {
+/* Add Task Form */
+.add-task {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,15 +10,20 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Title Styling */
-.add-title {
+/* Title */
+.add-task__title {
     font-size: 24px;
     font-weight: bold;
     color: #00682C;
 }
 
-/* Input fields */
-.task-input, .date-input {
+/* Input Groups */
+.add-task__group {
+    width: 100%;
+}
+
+/* Inputs */
+.add-task__input {
     width: 100%;
     max-width: 300px;
     padding: 10px;
@@ -31,38 +32,46 @@
     font-size: 16px;
 }
 
-.task-input:focus, .date-input:focus {
+.add-task__input:focus {
     border-color: #008C3D;
     outline: none;
 }
 
-/* Button container */
-.button-group {
+/* Date Input Modifier */
+.add-task__input--date {
+    width: 100%;
+}
+
+/* Action Buttons */
+.add-task__actions {
     display: flex;
     gap: 10px;
 }
 
-/* Save button */
-.save-task-btn {
-    background: #008C3D;
-    color: white;
+/* Buttons */
+.add-task__button {
     padding: 10px;
     border-radius: 6px;
     font-weight: bold;
+    cursor: pointer;
+    border: none;
 }
 
-.save-task-btn:hover {
+.add-task__button--save {
+    background: #008C3D;
+    color: white;
+}
+
+.add-task__button--save:hover {
     background: #00682C;
 }
 
-/* Cancel button */
-.cancel-task-btn {
+/* Cancel Button */
+.add-task__button--cancel {
     background: #d1d5db;
     color: black;
-    padding: 10px;
-    border-radius: 6px;
 }
 
-.cancel-task-btn:hover {
+.add-task__button--cancel:hover {
     background: #b0b3b8;
 }

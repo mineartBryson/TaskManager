@@ -1,19 +1,19 @@
 /* Modal Overlay */
-.modal-overlay {
+.task-modal__overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay to dim background */
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Ensures it appears above all other content */
+    z-index: 1000;
 }
 
 /* Modal Container */
-.modal-container {
+.task-modal__container {
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -25,7 +25,7 @@
 }
 
 /* Modal Title */
-.modal-title {
+.task-modal__title {
     text-align: center;
     color: #333;
     font-size: 24px;
@@ -33,16 +33,26 @@
     margin-bottom: 15px;
 }
 
-/* Task Info Styling */
-.task-name, .task-description, .due-date {
+/* Task Content */
+.task-modal__content {
+    margin-bottom: 15px;
+}
+
+.task-modal__name,
+.task-modal__description,
+.task-modal__due-date {
     font-size: 16px;
     font-weight: 500;
     color: #333;
     margin-bottom: 10px;
 }
 
-/* Close Button */
-.close-btn {
+/* Action Button */
+.task-modal__actions {
+    text-align: center;
+}
+
+.task-modal__button {
     background: #008C3D;
     color: white;
     padding: 10px 15px;
@@ -51,10 +61,9 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    display: block;
-    margin: 20px auto 0;
 }
 
-.close-btn:hover {
-    background: #00682C; /* Darker green */
+.task-modal__button--close:hover {
+    background: #00682C;
 }
+

@@ -1,4 +1,4 @@
-/* Root container */
+/* Root Container */
 #root {
     max-width: 1280px;
     margin: 1px auto;
@@ -6,31 +6,31 @@
     text-align: center;
 }
 
-/* Page Layout Wrapper */
-.home_container {
+/* App Container */
+.app {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    min-height: 100vh; /* Ensures full viewport height */
+    min-height: 100vh;
     box-sizing: border-box;
 }
 
 /* Main Content Wrapper */
-.content-wrapper {
+.app__content {
     flex-grow: 1;
     width: 100%;
     padding: 20px;
-    overflow-y: auto; /* Enables scrolling */
-    margin-top: 60px; /* Pushes content below the header */
-    margin-bottom: 60px; /* Leaves space for fixed footer */
+    overflow-y: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
-/* Header Bar */
-.header-bar {
+/* Header */
+.app__header {
     background: #008C3D;
     height: 60px;
-    width: calc(100vw - 15px); /* Prevents overlapping scrollbar */
+    width: calc(100vw - 15px);
     position: fixed;
     top: 0;
     left: 0;
@@ -39,28 +39,41 @@
     align-items: center;
 }
 
-.header-content {
-    display: flex; /* Enables horizontal alignment */
-    align-items: center; /* Centers items vertically */
-    justify-content: flex-start; /* Left-aligns content */
-    gap: 15px; /* Adds space between title and subtitle */
+.app__header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
     width: 100%;
-    max-width: 1200px; /* Keeps it structured */
+    max-width: 1200px;
     padding: 15px;
 }
 
-/* Footer Styling */
-footer {
+.app__title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.app__subtitle {
+    font-size: 16px;
+}
+
+/* Footer */
+.app__footer {
     width: calc(100vw - 15px);
     background: #008C3D;
     color: white;
-    padding: 0.2px 0; /* Adds vertical space */
+    padding: 10px 0;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 1000;
     text-align: center;
-    height: 50px; /* Increases height to fit text */
+    height: 50px;
+}
+
+.app__footer-text {
+    font-size: 14px;
 }
 
 
