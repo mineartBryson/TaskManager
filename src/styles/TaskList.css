@@ -64,11 +64,19 @@
 /* Task List Controls */
 .task-list__options {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     gap: 12px;
     width: 100%;
+    max-width: 830px;
     margin-bottom: 15px;
+}
+
+.task-list__selector {
+    max-width: 150px; /* Adjust to fit within the calendar */ /* Prevents overflow */
+    color: black;
 }
 
 /* Toggle Button */
@@ -93,6 +101,8 @@
 
 .task-list__toggle:hover {
     background-color: #008C3D;
+    transform: scale(1.05); /* Slightly enlarges the button */
+    transition: transform 0.2s ease-in-out; /* Smooth animation */
 }
 
 /* Task List Container */
@@ -196,6 +206,8 @@
 
 .task-list__button:hover {
     background-color: #008C3D;
+    transform: scale(1.05); /* Slightly enlarges the button */
+    transition: transform 0.2s ease-in-out; /* Smooth animation */
 }
 
 .task-list__button--delete {
@@ -204,6 +216,8 @@
 
 .task-list__button--delete:hover {
     background-color: darkred;
+    transform: scale(1.05); /* Slightly enlarges the button */
+    transition: transform 0.2s ease-in-out; /* Smooth animation */
 }
 
 /* Responsive Adjustments */

@@ -19,7 +19,8 @@
     border-radius: 8px;
     width: 90%;
     max-width: 500px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid #d1d5db; /* Subtle border for definition */
     text-align: left;
     position: relative;
 }
@@ -41,10 +42,10 @@
 .task-modal__name,
 .task-modal__description,
 .task-modal__due-date {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 /* Action Button */
@@ -61,9 +62,11 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
 }
 
 .task-modal__button--close:hover {
     background: #00682C;
+    transform: scale(1.05);
 }
 
