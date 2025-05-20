@@ -1,11 +1,16 @@
+// AddTaskForm.jsx
+// This view is rendered when the suer selects "Add New Task", it allows for them to create a new task to be tracked
+
 import React, { useState } from "react";
 import "../styles/AddTaskForm.css";
 
 const AddTaskForm = ({ setShowForm, setTasks }) => {
+    // Collecting the name, dscription, and due date
     const [taskName, setTaskName] = useState("");
     const [description, setDescription] = useState("");
     const [dueDate, setDueDate] = useState("");
 
+    // Called when the user selects submit
     const handleSubmit = (e) => {
         e.preventDefault();
 

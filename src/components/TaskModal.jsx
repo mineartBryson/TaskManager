@@ -1,3 +1,5 @@
+// TaskModal.jsx
+// This is the modal view that ppears whenever a user clicks "view" on a selected task. Shows all of the information for that task.
 import React, { useEffect } from "react";
 import "../styles/TaskModal.css";
 

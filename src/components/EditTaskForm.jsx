@@ -1,11 +1,15 @@
+// EditTaskForm.jsx
+// This is the view that is rendered whenever the user wishes to change any of the details for a specific task (due date, name, description)
 import React, { useState, useEffect } from "react";
 import "../styles/EditTaskForm.css";
 
 const EditTaskForm = ({ selectedTask, setShowEditForm, setTasks }) => {
+    // We have to track the state details - name, description, and due date
     const [taskName, setTaskName] = useState("");
     const [description, setDescription] = useState("");
     const [dueDate, setDueDate] = useState("");
 
+    // This is use to set the state when this form is rendered
     useEffect(() => {
         if (selectedTask) {
             setTaskName(selectedTask.name);
@@ -20,6 +24,7 @@ const EditTaskForm = ({ selectedTask, setShowEditForm, setTasks }) => {
         }
     }, [selectedTask]);
 
+    // When the user clicks submit, we have to set the new information that the user may have changed
     const handleSubmit = (e) => {
         e.preventDefault();
         setTasks((prevTasks) =>

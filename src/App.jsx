@@ -1,3 +1,6 @@
+// App.jsx
+// Primary container for the task manager application.
+
 import './App.css';
 import TaskList from './components/TaskList';
 
@@ -15,6 +18,7 @@ function App() {
         {/* Wrapper to control spacing & height */}
         <div className="app__content">
           <main>
+            {/* Holds the list of tasks and items that the user has added to complete */}
             <TaskList />
           </main>
         </div>
