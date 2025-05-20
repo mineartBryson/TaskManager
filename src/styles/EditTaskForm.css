@@ -1,5 +1,5 @@
-/* Edit Task Form Container */
-.edit-task-form {
+/* Edit Task Form */
+.edit-task {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,55 +10,69 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Title Styling */
-.edit-title {
+/* Title */
+.edit-task__title {
     font-size: 24px;
     font-weight: bold;
     color: #00682C;
 }
 
-/* Input Fields */
-.task-input, .date-input {
+/* Input Groups */
+.edit-task__group {
     width: 100%;
-    max-width: 300px;
+}
+
+/* Inputs */
+.edit-task__input {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     padding: 10px;
     border: 1px solid #d1d5db;
     border-radius: 6px;
     font-size: 16px;
 }
 
-.task-input:focus, .date-input:focus {
+.edit-task__input:focus {
     border-color: #008C3D;
     outline: none;
 }
 
-/* Button Container */
-.button-group {
+/* Date Input Modifier */
+.edit-task__input--date {
+    width: 100%;
+}
+
+/* Action Buttons */
+.edit-task__actions {
     display: flex;
     gap: 10px;
 }
 
 /* Save Button */
-.save-task-btn {
-    background: #008C3D;
-    color: white;
+.edit-task__button {
     padding: 10px;
     border-radius: 6px;
     font-weight: bold;
+    cursor: pointer;
+    border: none;
 }
 
-.save-task-btn:hover {
+.edit-task__button--save {
+    background: #008C3D;
+    color: white;
+}
+
+.edit-task__button--save:hover {
     background: #00682C;
 }
 
 /* Cancel Button */
-.cancel-task-btn {
+.edit-task__button--cancel {
     background: #d1d5db;
     color: black;
-    padding: 10px;
-    border-radius: 6px;
 }
 
-.cancel-task-btn:hover {
+.edit-task__button--cancel:hover {
     background: #b0b3b8;
 }
